@@ -8,14 +8,18 @@
     border-color: $darkgrey;
   }
 
-  main {
+  article {
     padding: 0 20px;
     margin-bottom: 30px;
+
+    @media only screen and (max-width: 320px) {
+      padding: 0 10px;
+    }
   }
 
   &-header {
     position: relative;
-    min-height: 280px;
+    min-height: 150px;
 
     &__no_backdrop {
       min-height: 130px;
@@ -23,8 +27,8 @@
 
     &__back {
       position: absolute;
-      top: 5px;
-      left: 5px;
+      top: 30px;
+      left: 15px;
       z-index: 2;
 
       svg {
@@ -49,11 +53,11 @@
 
   &-summary {
     position: relative;
-    margin: -100px 0 30px 0;
+    margin: -80px 0 30px 0;
     display: flex;
 
     &__poster {
-      margin-right: 10px;
+      margin-right: 15px;
 
       img {
         width: 150px;
@@ -61,16 +65,23 @@
         -webkit-box-shadow: -10px 10px 15px 0 rgba(0, 0, 0, 1);
         -moz-box-shadow: -10px 10px 15px 0 rgba(0, 0, 0, 1);
         box-shadow: -10px 10px 15px 0 rgba(0, 0, 0, 1);
+
+        @media only screen and (max-width: 320px) {
+          width: 120px;
+        }
       }
     }
 
     &__body {
+      margin-top: 80px;
+
       &--title {
-        margin-top: 100px;
+        margin: 15px 0;
       }
 
       &--date_rating,
       &--runtime {
+        font-size: 12px;
         color: $grey;
         line-height: 21px;
       }

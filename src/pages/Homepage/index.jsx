@@ -50,9 +50,9 @@ export class Homepage extends React.Component {
           <img src={logo} className="Homepage-logo" alt="logo" />
         </header>
         <main>
-          <section>
+          <section className="Homepage-search">
             <input
-              className="Homepage-search"
+              className="Homepage-search__input"
               placeholder="Search"
               onChange={handleChange}
               value={query}
@@ -60,7 +60,7 @@ export class Homepage extends React.Component {
             />
           </section>
           <section>
-            <h2>{query ? 'Search Results' : 'Popular Movies'}</h2>
+            <h2 className="Homepage-title">{query ? 'Search Results' : 'Popular Movies'}</h2>
             <div className="Homepage-results">
               {fetching ? <Spinner /> : <MovieContent movies={movies} />}
             </div>

@@ -18,10 +18,17 @@
   }
 
   &-logo {
-    height: 20vmin;
+    height: 15vmin;
+  }
+
+  &-title {
+    margin: 40px 10px 0 10px;
   }
 
   &-search {
+    margin: 0 10px;
+
+    &__input{
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     width: 100%;
@@ -46,6 +53,7 @@
       color: $green;
     }
   }
+}
 
   &-header {
     height: 40vmin;
