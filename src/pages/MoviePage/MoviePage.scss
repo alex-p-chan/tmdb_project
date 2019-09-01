@@ -1,0 +1,79 @@
+@import "../../utils/variables.scss";
+
+.Movie {
+  max-width: 500px;
+  margin: auto;
+
+  hr {
+    border-color: $darkgrey;
+  }
+
+  main {
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+
+  &-header {
+    position: relative;
+    min-height: 280px;
+
+    &__no_backdrop {
+      min-height: 130px;
+    }
+
+    &__back {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      z-index: 2;
+
+      svg {
+        path {
+          transition: fill 1s;
+        }
+      }
+
+      &:hover {
+        svg {
+          path {
+            fill: $grey;
+          }
+        }
+      }
+    }
+
+    &__backdrop {
+      width: 100%;
+    }
+  }
+
+  &-summary {
+    position: relative;
+    margin: -100px 0 30px 0;
+    display: flex;
+
+    &__poster {
+      margin-right: 10px;
+
+      img {
+        width: 150px;
+        border-radius: 15px;
+        -webkit-box-shadow: -10px 10px 15px 0 rgba(0, 0, 0, 1);
+        -moz-box-shadow: -10px 10px 15px 0 rgba(0, 0, 0, 1);
+        box-shadow: -10px 10px 15px 0 rgba(0, 0, 0, 1);
+      }
+    }
+
+    &__body {
+      &--title {
+        margin-top: 100px;
+      }
+
+      &--date_rating,
+      &--runtime {
+        color: $grey;
+        line-height: 21px;
+      }
+    }
+  }
+}
